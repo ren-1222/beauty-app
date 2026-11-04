@@ -1,0 +1,11 @@
+{
+  "name": "tazimagumi-beauty-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "@tazimagumi/client で beauty-kit の表現チェックを呼ぶ最小美容アプリ",
+  "engines": { "node": ">=22.18" },
+  "scripts": { "start": "node src/server.ts", "typecheck": "tsc --noEmit" },
+  "dependencies": { "@tazimagumi/client": "file:../../client" },
+  "devDependencies": { "@types/node": "^22.10.0", "typescript": "^5.7.0" }
+}
