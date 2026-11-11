@@ -1,3 +1,24 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ミガキくん ミニ美容アプリ</title><link rel="stylesheet" href="/style.css"></head>
-<body><main class="card"><p class="eyebrow">@tazimagumi/beauty-kit × @tazimagumi/client</p><h1>美容表現チェック</h1><p class="lead">文章を入力すると、キットサーバーの表現チェック部品で確認します。</p><p id="health" class="status">キットサーバーを確認中…</p><form id="form"><label for="text">商品説明・投稿文</label><textarea id="text" rows="5" placeholder="例：肌を整える化粧水です"></textarea><button type="submit">チェックする</button></form><section id="result" class="result" aria-live="polite"></section></main><script type="module" src="/app.js"></script></body></html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f3f4ef"><title>商品説明チェック | beauty-app</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <main class="shell">
+    <header class="masthead"><p class="eyebrow">BEAUTY KIT <span>／</span> PRODUCT REVIEW</p><div class="topline"><h1>商品説明を<br>確かめる。</h1><p class="intro">広告・商品ページの文章と全成分をまとめて確認し、レビューの出発点をつくります。</p></div><p id="health" class="status" role="status">キットサーバーを確認中…</p></header>
+    <form id="form" class="workspace">
+      <section class="input-column" aria-label="商品情報の入力">
+        <label for="text"><span class="step">01</span> 商品説明 <small>必須・8000字以内</small></label>
+        <textarea id="text" rows="7" maxlength="8000" placeholder="商品ページ、広告、SNS投稿などの文章を貼り付けてください。"></textarea>
+        <label for="ingredients"><span class="step">02</span> 全成分表示 <small>必須・4000字以内</small></label>
+        <textarea id="ingredients" rows="5" maxlength="4000" placeholder="水、グリセリン、ナイアシンアミド…"></textarea>
+        <label for="question"><span class="step optional">03</span> 根拠を確認したい質問 <small>任意・4000字以内</small></label>
+        <textarea id="question" rows="3" maxlength="4000" placeholder="例：ナイアシンアミドは化粧品でどのように説明できますか？"></textarea>
+        <button id="submit" type="submit">レビュー結果を見る <span aria-hidden="true">→</span></button>
+        <p class="privacy">入力内容はこの画面の処理にのみ使い、保存しません。</p>
+      </section>
+      <section id="result" class="results" aria-live="polite" aria-busy="false"><div class="empty"><span>REVIEW DESK</span><p>商品情報を入力すると<br>確認結果がここに表示されます。</p></div></section>
+    </form>
+    <footer>この結果は暫定ルールによる確認補助です。法的な適合性、成分の効果や安全性を保証しません。公開・掲載前に担当者が原典と文脈を確認してください。</footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
